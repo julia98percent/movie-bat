@@ -14,7 +14,7 @@ function Search() {
       const response = await axios
         .get(
           process.env.REACT_APP_DB_HOST +
-            `/search/movies/title/${searchKeyword}`,
+            `http://ec2-3-36-74-205.ap-northeast-2.compute.amazonaws.com:5000/search/movies/title/${searchKeyword}`,
           {},
           { "Access-Control-Allow-Origin": "*", withCredentials: false }
         )
